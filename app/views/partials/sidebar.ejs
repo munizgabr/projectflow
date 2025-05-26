@@ -1,0 +1,57 @@
+<div class="sidebar bg-indigo-800 text-white flex flex-col sidebar-expanded" id="sidebar">
+    <div class="p-4 flex items-center justify-between border-b border-indigo-700">
+        <div class="flex items-center">
+            <i class="fas fa-project-diagram text-2xl sidebar-icon"></i>
+            <span class="ml-2 text-xl font-bold sidebar-text">ProjectFlow</span>
+        </div>
+        <button onclick="toggleSidebar()" class="text-white focus:outline-none">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+    
+    <nav class="flex-1 overflow-y-auto">
+        <div class="p-4">
+            <div class="mb-6">
+                <h3 class="text-xs uppercase text-indigo-400 mb-2 sidebar-text">Menu</h3>
+                <ul>
+                    <li class="mb-1">
+                        <a href="/dashboard" class="flex items-center p-2 rounded hover:bg-indigo-700 <%= activePage === 'dashboard' ? 'bg-indigo-700' : '' %>">
+                            <i class="fas fa-tachometer-alt sidebar-icon"></i>
+                            <span class="sidebar-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="/projects" class="flex items-center p-2 rounded hover:bg-indigo-700 <%= activePage === 'projects' ? 'bg-indigo-700' : '' %>">
+                            <i class="fas fa-project-diagram sidebar-icon"></i>
+                            <span class="sidebar-text">Projetos</span>
+                        </a>
+                    </li>
+                    <li class="mb-1">
+                        <a href="/teams" class="flex items-center p-2 rounded hover:bg-indigo-700 <%= activePage === 'teams' ? 'bg-indigo-700' : '' %>">
+                            <i class="fas fa-users sidebar-icon"></i>
+                            <span class="sidebar-text">Equipes</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="p-4 border-t border-indigo-700">
+        <div class="flex items-center">
+            <img src="https://ui-avatars.com/api/?name=Admin" alt="User" class="w-8 h-8 rounded-full">
+            <div class="ml-2 sidebar-text">
+                <p class="font-medium">Admin</p>
+                <p class="text-xs text-indigo-300">Administrador</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('collapsed');
+    sidebar.classList.toggle('sidebar-expanded');
+}
+</script>

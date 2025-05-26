@@ -1,0 +1,63 @@
+/* Estilos globais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar styles */
+.sidebar {
+    min-height: 100vh;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.sidebar.collapsed .sidebar-text {
+    display: none;
+}
+
+.sidebar.collapsed .sidebar-icon {
+    margin-right: 0;
+}
+
+.sidebar-expanded {
+    width: 250px;
+}
+
+/* Kanban board styles */
+.kanban-column {
+    min-height: 400px;
+}
+
+.draggable-item {
+    cursor: move;
+    transition: all 0.3s ease;
+}
+
+.draggable-item:hover {
+    transform: translateY(-2px);
+}
+
+/* Progress bars */
+.sprint-progress {
+    height: 8px;
+}
+
+/* Modal transitions */
+.modal-enter {
+    opacity: 0;
+}
+
+.modal-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.modal-exit {
+    opacity: 1;
+}
+
+.modal-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}
